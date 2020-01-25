@@ -238,7 +238,7 @@ export const HEAD_SOFTWARE_DEVELOPMENT: Job = {
   displayOrder: 1
 }
 export const SYSTEMS_SECURITY_ADMIN: Job = {
-  title: 'Systems Security\n\r Administrator',
+  title: 'Systems Security Admin',
   department: TECHNOLOGY,
   description: 'I administer the system security',
   displayOrder: 5

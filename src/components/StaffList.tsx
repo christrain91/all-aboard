@@ -12,8 +12,7 @@ interface StaffListProps {
 const Container = styled.div`
   text-align: 'center';
   margin: 0 auto;
-  width: 90%;
-  padding-left: 10px;
+  width: 100%;
   font-weight: normal;
 `
 

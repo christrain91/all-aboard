@@ -17,7 +17,7 @@ export default (props: DepartmentProps) => {
   const sortedStaff = sortStaff(props.staff)
 
   const Container = styled.div`
-    margin: 50px 0;
+    margin-bottom: 50px;
   `
 
   const Title = styled.div`
@@ -28,6 +28,7 @@ export default (props: DepartmentProps) => {
     font-weight: bold;
     width: auto;
     font-size: 1.7em;
+    margin-bottom: 3px;
   `
 
   return (

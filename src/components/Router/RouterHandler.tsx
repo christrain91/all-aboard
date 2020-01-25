@@ -7,13 +7,13 @@ import NotFound from '../Pages/NotFound'
 const RouteHandler: React.FC = () => {
   return (
     <Router>
-      <div>
+      <>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/staff/:id" exact component={Staff} />
           <Route component={NotFound} />
         </Switch>
-      </div>
+      </>
     </Router>
   )
 }

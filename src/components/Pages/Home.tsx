@@ -5,18 +5,24 @@ import SearchBar from '../SearchBar'
 import { StaffMember } from '../../definitions/index'
 import styled from 'styled-components'
 import _ from 'lodash'
+import { isMobile } from 'react-device-detect'
 
 const SearchContainer = styled.div`
-  width: 500px;
+  width: ${isMobile ? '90%' : '500px'};
   margin: 0 auto;
   padding-bottom: 10px;
+`
+
+const PageContainer = styled.div`
+  width: ${isMobile ? '100%' : '90%'};
+  margin: 0 auto;
 `
 
 export default function() {
   const [hasSearch, setHasSearch] = useState(false)
   const [staff, setStaff] = useState(staffData)
   return (
-    <>
+    <PageContainer>
       <SearchContainer>
         <SearchBar
           onSearch={search => {
@@ -26,7 +32,7 @@ export default function() {
         />
       </SearchContainer>
       <StaffList staff={staff} showSearchResults={hasSearch} />
-    </>
+    </PageContainer>
   )
 }
 

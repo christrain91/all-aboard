@@ -4,14 +4,25 @@ import { StaffMember } from '../definitions/index'
 import { getStaffId } from '../services/StaffService'
 import StaffAvatar from './StaffAvatar'
 import { Link } from 'react-router-dom'
+import { isMobile } from 'react-device-detect'
 
 interface StaffMemberProps {
   staffMember: StaffMember
 }
 
+const StaffMemberContainer = styled.div`
+  display: inline-block;
+  text-align: center;
+  margin: ${isMobile ? '4px' : '6px'};
+  border-radius: 6px;
+  padding-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
+`
+
 const Name = styled.span`
   display: block;
   font-weight: bold;
+  font-size: 1em;
 `
 
 const DepartmentName = styled.span`
@@ -19,21 +30,9 @@ const DepartmentName = styled.span`
   font-size: 0.9em;
 `
 
-const StaffMemberContainer = styled.div`
-  display: inline-block;
-  text-align: center;
-  margin: 5px;
-  border-radius: 6px;
-  padding-bottom: 15px;
-  background-color: rgba(0, 0, 0, 0.4);
-
-  :hover {
-    background-color: rgba(0, 0, 0, 0.45);
-  }
-`
-
 export default ({ staffMember }: StaffMemberProps) => {
   const fontColour = staffMember.job.department.fontColour || '#fff'
+  const avatarSize = isMobile ? 130 : 200
 
   const Banner = styled.div`
     background-color: ${staffMember.job.department.background};
@@ -49,7 +48,11 @@ export default ({ staffMember }: StaffMemberProps) => {
   return (
     <StaffMemberContainer key={id}>
       <Link to={`/staff/${id}`}>
-        <StaffAvatar staffMember={staffMember} size={200} radius={'6px'} />
+        <StaffAvatar
+          staffMember={staffMember}
+          size={avatarSize}
+          radius={'6px'}
+        />
         <Banner>
           <Name>{fullName}</Name>
           <DepartmentName>{staffMember.job.title}</DepartmentName>
