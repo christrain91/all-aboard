@@ -22,7 +22,7 @@ export const OWNER: Job = {
 export const DIRECTOR_OF_SECURITY: Job = {
   title: 'Director of Security',
   department: DIRECTOR,
-  description: 'Make things are secure',
+  description: 'I Make things secure, or at least give it a go',
   displayOrder: 1
 }
 export const DIRECTOR_OF_FINANCE: Job = {
@@ -35,7 +35,7 @@ export const DIRECTOR_OF_FINANCE: Job = {
 export const DIRECTOR_OF_LOGISTICS: Job = {
   title: 'Director of Logistics',
   department: DIRECTOR,
-  description: 'I move things',
+  description: 'I move things from A to B and sometimes C',
   displayOrder: 3
 }
 export const DIRECTOR_OF_PUBLIC_RELATIONS: Job = {
@@ -69,14 +69,14 @@ export const VET_SUR: Job = {
   department: LABORATORY,
   displayOrder: 2,
   description:
-    'I will safeguard the health and welfare of animals. In addition to this, I use my practical skills and knowledge of animal physiology, nutrition and medicine to diagnose illnesses, prescribe medicines and perform surgery.'
+    'I safeguard the health and welfare of the dinosaurs. In addition to this, I use my practical skills and knowledge of animal physiology, nutrition and medicine to diagnose illnesses, prescribe medicines and perform surgery.'
 }
 export const VET_ASS: Job = {
   title: 'Veterinary Assistant',
   department: LABORATORY,
   displayOrder: 3,
   description:
-    "I perform all aspects of routine pet care. Feed animals and monitor whether they're eating. I assist veterinarians and vet technicians with lab work as well as clean, sterilise, maintain operating rooms, examining rooms, cages, and surgical equipment."
+    'I perform all aspects of routine dinosaur care. Feed dinosaurs and monitor whether their eating habits. I assist veterinarians and vet technicians with lab work as well as clean, sterilise, maintain operating rooms, examining rooms, cages, and surgical equipment.'
 }
 export const PALEONTOLOGIST: Job = {
   title: 'Paleontologist',
