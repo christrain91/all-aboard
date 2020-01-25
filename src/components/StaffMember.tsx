@@ -32,7 +32,7 @@ const DepartmentName = styled.span`
 
 export default ({ staffMember }: StaffMemberProps) => {
   const fontColour = staffMember.job.department.fontColour || '#fff'
-  const avatarSize = isMobile ? 150 : 200
+  const avatarSize = isMobile ? 140 : 200
 
   const Banner = styled.div`
     background-color: ${staffMember.job.department.background};
