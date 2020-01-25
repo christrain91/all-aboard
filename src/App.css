@@ -5,6 +5,17 @@ html {
 body {
   height: 100%;
   margin: 0;
+}
+
+#root {
+  height: 100%;
+  background-color: #444;
+}
+
+#page-wrap {
+  height: 100%;
+  overflow-y: auto;
+  margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: sans-serif;
@@ -66,4 +77,9 @@ body {
       rgba(123, 123, 123, 0.05) 100%
     ),
     linear-gradient(90deg, rgb(60, 199, 213), rgb(124, 159, 221));
+}
+
+a {
+  text-decoration: none;
+  color: #444;
 }

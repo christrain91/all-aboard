@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Logo = styled.img`
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: block;
+`
+
 export default () => {
-  const Logo = styled.img`
-    width: 200px;
-    margin: 0 auto;
-    display: block;
-  `
   return <Logo src="/InGenLogo.png" />
 }

@@ -6,29 +6,37 @@ import { StaffMember } from '../definitions/index'
 interface StaffAvatarProps {
   staffMember: StaffMember
   size?: number
+  radius?: string
 }
 
 export default (props: StaffAvatarProps) => {
-  const [src, setSrc] = useState(`/staff/${getStaffId(props.staffMember)}.jpg`)
+  const staffId = getStaffId(props.staffMember)
+  const [src, setSrc] = useState(`/staff/${staffId}.jpg`)
+  const [loaded, setLoaded] = useState(false)
 
   const size = props.size || 100
+  const radius = props.radius || '100%'
   const Avatar = styled.img`
     width: ${size}px;
     height: ${size}px;
-    border-radius: 100%;
     display: inline-block;
+    border-radius: ${radius};
     margin: 10px;
-    border: 1px solid #eee;
-    box-shadow: 1px 1px 10px #999;
+    box-shadow: 0 0 5px #777;
+    opacity: ${loaded ? 1 : 0};
   `
 
   const fullName = `${props.staffMember.firstname} ${props.staffMember.surname}`
 
   return (
-    <Avatar
-      src={src}
-      title={fullName}
-      onError={() => setSrc('/NoAvatar.jpg')}
-    />
+    <>
+      <Avatar
+        key={`avatar_${staffId}`}
+        src={src}
+        title={fullName}
+        onError={() => setSrc('/NoAvatar.jpg')}
+        onLoad={() => setLoaded(true)}
+      />
+    </>
   )
 }

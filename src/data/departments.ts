@@ -1,36 +1,52 @@
 import {
-  BLUE,
-  LIGHT_BLUE,
-  BLACK,
-  DARK_RED,
+  GOLD,
   GREEN,
-  GREY,
-  ORANGE
+  LIGHT_GREEN,
+  DARK_RED,
+  LIGHT_BLUE,
+  DARK_BLUE,
+  PURPLE,
+  RED
 } from './colours'
 import { Department } from '../definitions'
 
+export const OWNERS: Department = {
+  id: 1,
+  title: 'Owners',
+  background: GOLD
+}
 export const DIRECTOR: Department = {
-  title: 'Director',
-  background: BLUE
+  id: 2,
+  title: 'Directors',
+  background: DARK_RED
 }
-export const PARK_RANGER: Department = {
-  title: 'Park Ranger',
-  background: BLACK
+export const ENGINEERING: Department = {
+  id: 3,
+  title: 'Engineering',
+  background: DARK_BLUE
 }
-export const DINOSAUR_EXPERT: Department = {
-  title: 'Dinosaur Expert',
-  background: GREEN
+export const TECHNOLOGY: Department = {
+  id: 4,
+  title: 'Technology',
+  background: PURPLE
 }
 export const CUSTOMER_SUPPORT: Department = {
+  id: 5,
   title: 'Customer Support',
-  background: GREY
+  background: LIGHT_GREEN
 }
-export const PARK_VISITOR: Department = {
-  title: 'Park Visitor',
-  background: DARK_RED,
-  fontColour: ORANGE
-}
-export const LAB_TECHNICIAN: Department = {
-  title: 'Lab Technician',
+export const LABORATORY: Department = {
+  id: 6,
+  title: 'Laboratory',
   background: LIGHT_BLUE
+}
+export const SECURITY: Department = {
+  id: 7,
+  title: 'Security',
+  background: RED
+}
+export const PARK_RANGER: Department = {
+  id: 8,
+  title: 'Park Rangers',
+  background: GREEN
 }
